@@ -1,4 +1,4 @@
-# Project 2 - *Flixster*
+  # Project 2 - *Flixster*
 
 **Flixster** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
