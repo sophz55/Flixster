@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F39E0C8320E45EE400A94D12 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E0C8220E45EE400A94D12 /* MovieCell.m */; };
 		F3DB553820E40B14000ADB51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB553720E40B14000ADB51 /* AppDelegate.m */; };
-		F3DB553B20E40B15000ADB51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB553A20E40B15000ADB51 /* ViewController.m */; };
 		F3DB553E20E40B15000ADB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB553C20E40B15000ADB51 /* Main.storyboard */; };
 		F3DB554020E40B15000ADB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB553F20E40B15000ADB51 /* Assets.xcassets */; };
 		F3DB554320E40B15000ADB51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB554120E40B15000ADB51 /* LaunchScreen.storyboard */; };
 		F3DB554620E40B15000ADB51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB554520E40B15000ADB51 /* main.m */; };
 		F3DB555020E40B15000ADB51 /* FlixsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB554F20E40B15000ADB51 /* FlixsterTests.m */; };
 		F3DB555B20E40B15000ADB51 /* FlixsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB555A20E40B15000ADB51 /* FlixsterUITests.m */; };
+		F3DB556A20E4149B000ADB51 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB556920E4149B000ADB51 /* MoviesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F39E0C8120E45EE400A94D12 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		F39E0C8220E45EE400A94D12 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		F3DB553320E40B14000ADB51 /* Flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB553620E40B14000ADB51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3DB553720E40B14000ADB51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F3DB553920E40B15000ADB51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3DB553A20E40B15000ADB51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F3DB553D20E40B15000ADB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3DB553F20E40B15000ADB51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3DB554220E40B15000ADB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		F3DB555620E40B15000ADB51 /* FlixsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB555A20E40B15000ADB51 /* FlixsterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixsterUITests.m; sourceTree = "<group>"; };
 		F3DB555C20E40B15000ADB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3DB556820E4149B000ADB51 /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
+		F3DB556920E4149B000ADB51 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,11 @@
 		F3DB553520E40B14000ADB51 /* Flixster */ = {
 			isa = PBXGroup;
 			children = (
+				F3DB556D20E41569000ADB51 /* Models */,
+				F3DB556C20E41565000ADB51 /* Views */,
+				F3DB556B20E41554000ADB51 /* View Controllers */,
 				F3DB553620E40B14000ADB51 /* AppDelegate.h */,
 				F3DB553720E40B14000ADB51 /* AppDelegate.m */,
-				F3DB553920E40B15000ADB51 /* ViewController.h */,
-				F3DB553A20E40B15000ADB51 /* ViewController.m */,
 				F3DB553C20E40B15000ADB51 /* Main.storyboard */,
 				F3DB553F20E40B15000ADB51 /* Assets.xcassets */,
 				F3DB554120E40B15000ADB51 /* LaunchScreen.storyboard */,
@@ -130,6 +134,31 @@
 				F3DB555C20E40B15000ADB51 /* Info.plist */,
 			);
 			path = FlixsterUITests;
+			sourceTree = "<group>";
+		};
+		F3DB556B20E41554000ADB51 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3DB556820E4149B000ADB51 /* MoviesViewController.h */,
+				F3DB556920E4149B000ADB51 /* MoviesViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F3DB556C20E41565000ADB51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F39E0C8120E45EE400A94D12 /* MovieCell.h */,
+				F39E0C8220E45EE400A94D12 /* MovieCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3DB556D20E41569000ADB51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3DB553B20E40B15000ADB51 /* ViewController.m in Sources */,
 				F3DB554620E40B15000ADB51 /* main.m in Sources */,
 				F3DB553820E40B14000ADB51 /* AppDelegate.m in Sources */,
+				F39E0C8320E45EE400A94D12 /* MovieCell.m in Sources */,
+				F3DB556A20E4149B000ADB51 /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T66NN72CYU;
 				INFOPLIST_FILE = Flixster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T66NN72CYU;
 				INFOPLIST_FILE = Flixster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
