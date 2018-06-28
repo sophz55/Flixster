@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *movies;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -26,6 +27,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    [self.activityIndicator startAnimating];
     [self fetchMovies];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
@@ -61,6 +63,7 @@
             
             [self.collectionView reloadData];
         }
+        [self.activityIndicator stopAnimating];
     }];
     [task resume];
 }
