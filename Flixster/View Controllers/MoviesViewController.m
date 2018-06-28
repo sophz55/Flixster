@@ -33,7 +33,6 @@
     [self fetchMovies];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor blackColor];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
 }
