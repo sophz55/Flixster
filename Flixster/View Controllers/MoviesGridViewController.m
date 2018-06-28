@@ -1,41 +1,49 @@
 //
-//  MoviesViewController.m
+//  MoviesGridViewController.m
 //  Flixster
 //
-//  Created by Sophia Zheng on 6/27/18.
+//  Created by Sophia Zheng on 6/28/18.
 //  Copyright © 2018 Sophia Zheng. All rights reserved.
 //
 
-#import "MoviesViewController.h"
-#import "MovieCell.h"
+#import "MoviesGridViewController.h"
+#import "MovieCollectionCell.h"
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MoviesGridViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *movies;
-@property (strong, nonatomic) UIRefreshControl *refreshControl;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
-@implementation MoviesViewController
+@implementation MoviesGridViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
     
-    [self.activityIndicator startAnimating];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    
     [self fetchMovies];
     
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor blackColor];
-    [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    
+    CGFloat frameWidth = self.collectionView.frame.size.width;
+    
+    layout.minimumInteritemSpacing = 5;
+    layout.minimumLineSpacing = 5;
+    
+    CGFloat cellsPerLine;
+    if (frameWidth > 400) {
+        cellsPerLine = 4;
+    } else {
+        cellsPerLine = 3;
+    }
+    CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing * (cellsPerLine + 1)) / cellsPerLine;
+    layout.itemSize = CGSizeMake(itemWidth, itemWidth * 1.5);
+    
 }
 
 - (void)fetchMovies {
@@ -51,11 +59,8 @@
             
             self.movies = dataDictionary[@"results"];
             
-            [self.tableView reloadData];
+            [self.collectionView reloadData];
         }
-        [self.refreshControl endRefreshing];
-        [self.activityIndicator stopAnimating];
-        
     }];
     [task resume];
 }
@@ -65,19 +70,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
     return self.movies.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSDictionary *movie = self.movies[indexPath.row];
+    MovieCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCollectionCell" forIndexPath:indexPath];
+    
+    NSDictionary *movie = self.movies[indexPath.item];
     
     if (movie){
-        cell.titleLabel.text = movie[@"title"];
-        cell.overviewLabel.text = movie[@"overview"];
-        
         NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
         NSString *posterPathString = movie[@"poster_path"];
         NSString *posterURLString = [baseURLString stringByAppendingString:posterPathString];
@@ -89,6 +93,7 @@
     return cell;
 }
 
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -96,14 +101,15 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    UITableViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    UICollectionViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
     NSDictionary *movie = self.movies[indexPath.row];
     DetailsViewController *detailsViewController = [segue destinationViewController];
     
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     detailsViewController.movie = movie;
 }
+
 
 @end
