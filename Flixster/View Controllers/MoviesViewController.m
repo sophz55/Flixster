@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSArray *movies;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) NSArray *filteredMovies;
+@property (nonatomic) BOOL load;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
@@ -33,6 +34,7 @@
     self.searchBar.delegate = self;
     
     [self.activityIndicator startAnimating];
+    self.load = YES;
     [self fetchMovies];
 
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -52,7 +54,10 @@
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             
             self.movies = dataDictionary[@"results"];
-            self.filteredMovies = self.movies;
+            if (self.load) {
+                self.filteredMovies = self.movies;
+                self.load = NO;
+            }
 
             [self.tableView reloadData];
         }
