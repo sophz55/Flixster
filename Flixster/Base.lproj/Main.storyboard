@@ -97,12 +97,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="edu-wx-pE5">
+                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" searchBarStyle="minimal" id="edu-wx-pE5">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
@@ -153,6 +154,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="PrL-hX-dEF"/>
@@ -237,7 +239,7 @@
         <scene sceneID="bg3-Q0-h8p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hcu-sp-EJW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List View" id="p8Z-8o-bUI"/>
+                    <tabBarItem key="tabBarItem" title="List View" image="list" id="p8Z-8o-bUI"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="wFQ-iB-FNK">
@@ -257,7 +259,7 @@
         <scene sceneID="TWX-lW-h9K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZAd-YQ-uuB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grid View" id="YqA-zo-ANh"/>
+                    <tabBarItem key="tabBarItem" title="Grid View" image="grid" id="YqA-zo-ANh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MOB-iI-ZQR">
@@ -274,6 +276,10 @@
             <point key="canvasLocation" x="2031" y="-563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grid" width="42" height="42"/>
+        <image name="list" width="35" height="35"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1nN-95-J5k"/>
     </inferredMetricsTieBreakers>
