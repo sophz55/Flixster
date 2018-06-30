@@ -8,6 +8,7 @@
 
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "TrailersViewController.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
@@ -42,7 +43,6 @@
     self.datesLabel.text = self.movie[@"release_date"];
     self.overviewLabel.text = self.movie [@"overview"];
     [self.overviewLabel sizeToFit];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,14 +50,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    TrailersViewController *trailersViewController = [segue destinationViewController];
+    trailersViewController.movieID = [NSString stringWithFormat:@"%@", self.movie[@"id"]];
 }
-*/
 
 @end

@@ -14,6 +14,8 @@
 		F3B4C72D20E5574B0000A2B8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B4C72C20E5574B0000A2B8 /* DetailsViewController.m */; };
 		F3B4C73020E5842F0000A2B8 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B4C72F20E5842F0000A2B8 /* MoviesGridViewController.m */; };
 		F3B4C73320E589920000A2B8 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B4C73220E589920000A2B8 /* MovieCollectionCell.m */; };
+		F3D2AB4220E6E1A300E1178B /* TrailersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2AB4120E6E1A300E1178B /* TrailersViewController.m */; };
+		F3D2AB4420E6E2FD00E1178B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2AB4320E6E2FD00E1178B /* WebKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F3DB553820E40B14000ADB51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DB553720E40B14000ADB51 /* AppDelegate.m */; };
 		F3DB553E20E40B15000ADB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB553C20E40B15000ADB51 /* Main.storyboard */; };
 		F3DB554020E40B15000ADB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB553F20E40B15000ADB51 /* Assets.xcassets */; };
@@ -57,6 +59,9 @@
 		F3B4C72F20E5842F0000A2B8 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		F3B4C73120E589920000A2B8 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		F3B4C73220E589920000A2B8 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		F3D2AB4020E6E1A300E1178B /* TrailersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailersViewController.h; sourceTree = "<group>"; };
+		F3D2AB4120E6E1A300E1178B /* TrailersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailersViewController.m; sourceTree = "<group>"; };
+		F3D2AB4320E6E2FD00E1178B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F3DB553320E40B14000ADB51 /* Flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB553620E40B14000ADB51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3DB553720E40B14000ADB51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D2AB4420E6E2FD00E1178B /* WebKit.framework in Frameworks */,
 				67F64F9FE0E96EF7D64AC6EF /* libPods-Flixster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,7 @@
 		92B518E49494BC6FA9BCCA6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3D2AB4320E6E2FD00E1178B /* WebKit.framework */,
 				FB6202371C06DE9EC77157B7 /* libPods-Flixster.a */,
 				A05DE3840DBEADCC7A6DF6DA /* libPods-FlixsterTests.a */,
 				7F65E11DA63C38CEB365909A /* libPods-FlixsterUITests.a */,
@@ -194,6 +201,8 @@
 				F3B4C72C20E5574B0000A2B8 /* DetailsViewController.m */,
 				F3B4C72E20E5842F0000A2B8 /* MoviesGridViewController.h */,
 				F3B4C72F20E5842F0000A2B8 /* MoviesGridViewController.m */,
+				F3D2AB4020E6E1A300E1178B /* TrailersViewController.h */,
+				F3D2AB4120E6E1A300E1178B /* TrailersViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D2AB4220E6E1A300E1178B /* TrailersViewController.m in Sources */,
 				F3DB554620E40B15000ADB51 /* main.m in Sources */,
 				F3B4C72D20E5574B0000A2B8 /* DetailsViewController.m in Sources */,
 				F3DB553820E40B14000ADB51 /* AppDelegate.m in Sources */,
