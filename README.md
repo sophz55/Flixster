@@ -16,7 +16,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-- [ ] User sees an error message when there's a networking error.
+- [x] User sees an error message when there's a networking error.
 - [x] Movies are displayed using a CollectionView instead of a TableView.
 - [x] User can search for a movie.
 - [ ] All images fade in as they are loading.
@@ -31,8 +31,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Best practices for implementing features: reinforcing the required steps in adding new view controllers, segues, navigation/tab bar controllers, etc.
+2. New features that could be added from here: finding movie showtimes, filtering movies by genre, etc.
 
 ## Video Walkthrough
 
@@ -44,7 +44,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+In building this app, I learned how to use numerous basic features in Objective-C. I found it challenging to remember exactly which outlets needed to be connected and which features should be coded vs. toggled in storyboard. My main challenge was simply getting used to the interface and the most efficient way to debug my code.
 
 ## Credits
 
@@ -54,7 +54,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Sophia Zheng]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

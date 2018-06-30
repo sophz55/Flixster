@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="381.60000000000002" y="158.77061469265368"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Movie Details-->
         <scene sceneID="Nkg-NC-bhL">
             <objects>
-                <viewController id="bAR-p3-SAO" customClass="DetailsViewController" sceneMemberID="viewController">
+                <viewController title="Movie Details" id="bAR-p3-SAO" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ryu-Mo-nkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
